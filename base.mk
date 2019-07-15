@@ -11,7 +11,9 @@ PRODUCT_COPY_FILES += \
 	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/phh/treble/sepolicy
-DEVICE_PACKAGE_OVERLAYS += device/phh/treble/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+	device/phh/treble/overlay \
+	device/phh/treble/overlay-lineage
 
 $(call inherit-product, vendor/hardware_overlay/overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
