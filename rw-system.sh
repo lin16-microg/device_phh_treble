@@ -124,6 +124,27 @@ elif mount -o remount,rw /; then
     resize2fs /dev/root || true
     resize2fs /dev/tmp-phh || true
 fi
+
+
+
+if [ "$(getprop ro.hardware)" = "hi3650" ]; then
+    libs=( "android.hardware.camera.common@1.0.so" "android.hardware.configstore@1.0.so" "libcamera_metadata.so" "libnativebridge.so" "libpng.so" "libziparchive.so" "android.hardware.camera.device@1.0.so" "android.hardware.configstore-utils.so" "libdng_sdk.so" "libicui18n.so" "libnativehelper.so" "libskia.so" "android.hardware.camera.device@3.2.so" "android.hidl.allocator@1.0.so" "libexpat.so" "libicuuc.so" "libnativeloader.so" "libui.so" "android.hardware.camera.provider@2.4.so" "libbinder.so" "libfmq.so" "libjpeg.so" "libvulkan.so" "libpiex.so" )
+
+    mkdir /system/lib/sphal-compat || true
+    for lib in "${libs[@]}"
+        do
+           : 
+           touch /system/lib/sphal-compat/$lib || true
+           chmod 644 /system/lib/sphal-compat/$lib
+           mount -o bind /system/lib/vndk-26/$lib /system/lib/sphal-compat/$lib || true
+        done
+    touch /system/lib/sphal-compat/libft2.so || true
+    mount -o bind /system/lib/libft2.so /system/lib/sphal-compat/libft2.so || true
+    chmod 755 /system/lib/sphal-compat
+fi
+
+
+
 mount -o remount,ro /system || true
 mount -o remount,ro / || true
 

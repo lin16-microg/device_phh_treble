@@ -6,3 +6,7 @@
 
 /sec_storage(/.*)?      u:object_r:teecd_data_file:s0
 /dev/dsm                u:object_r:dmd_device:s0
+
+/system/bin/camerainit-hi3650.sh                u:object_r:phhsu_exec:s0
+/system/bin/cameraserver-hi3650.sh              u:object_r:phhsu_exec:s0
+/system/bin/cameradaemon-hi3650.sh              u:object_r:phhsu_exec:s0

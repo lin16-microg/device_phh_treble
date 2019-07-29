@@ -45,6 +45,7 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/vndk-detect:system/bin/vndk-detect \
 	device/phh/treble/vndk.rc:system/etc/init/vndk.rc \
 	device/phh/treble/ld.config.26.txt:system/etc/ld.config.26.txt \
+	device/phh/treble/ld.config.hi3650.txt:system/etc/ld.config.hi3650.txt \
 
 #USB Audio
 PRODUCT_COPY_FILES += \
@@ -107,7 +108,10 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/files/oneplus6-synaptics_s3320.kl:system/phh/oneplus6-synaptics_s3320.kl \
 	device/phh/treble/files/huawei-fingerprint.kl:system/phh/huawei/fingerprint.kl \
 	device/phh/treble/files/samsung-sec_e-pen.idc:system/usr/idc/sec_e-pen.idc \
-	device/phh/treble/files/samsung-9810-floating_feature.xml:system/ph/sam-9810-flo_feat.xml \
+	device/phh/treble/files/cam.hi3650.sh:system/bin/cam.hi3650.sh \
+	device/phh/treble/files/cameraserver-hi3650.sh:system/bin/cameraserver-hi3650.sh \
+	device/phh/treble/files/camerainit-hi3650.sh:system/bin/camerainit-hi3650.sh \
+	device/phh/treble/files/cameradaemon-hi3650.sh:system/bin/cameradaemon-hi3650.sh \
 	device/phh/treble/files/mimix3-gpio-keys.kl:system/phh/mimix3-gpio-keys.kl \
 	device/phh/treble/files/nokia-soc_gpio_keys.kl:system/phh/nokia-soc_gpio_keys.kl
 

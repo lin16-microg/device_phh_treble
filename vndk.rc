@@ -18,3 +18,22 @@ on property:persist.sys.phh.mainkeys=*
 
 on property:persist.sys.phh.xiaomi.dt2w=*
     exec_background u:r:phhsu_daemon:s0 root -- /system/bin/phh-prop-handler.sh "persist.sys.phh.xiaomi.dt2w"
+
+service hi3650_cameradaemon /system/bin/cameradaemon-hi3650.sh
+	user root
+	group root
+	disabled
+
+service hi3650_cameraserver /system/bin/cameraserver-hi3650.sh
+	user root
+	group root
+	disabled
+
+service hi3650_camerainit /system/bin/camerainit-hi3650.sh
+	user root
+	group root
+	disabled
+	oneshot
+	
+on property:ro.hardware=hi3650 && property:sys.boot_completed=1
+	start hi3650_camerainit

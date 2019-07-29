@@ -20,6 +20,11 @@ if ( getprop ro.hardware | grep -qE '(kirin970|hi3660|hi6250|hi3670)' );then
 	FOUND_HUAWEI=1
 fi
 
+if ( getprop ro.hardware | grep -qE '(hi3650)' );then
+	FOUND_HUAWEI=1
+	setprop persist.sys.vndk "hi3650"
+fi
+
 if getprop ro.vendor.build.fingerprint |grep -qiE '(huawei|honor|hi3660)';then
 	FOUND_HUAWEI=1
 fi
