@@ -36,6 +36,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	persist.sys.usb.config=adb \
 	ro.cust.cdrom=/dev/null	
 
+#Huawei offline charging
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,device/phh/treble/huawei_charger,system/etc/charger)
+
 #VNDK config files
 PRODUCT_COPY_FILES += \
 	device/phh/treble/vndk-detect:system/bin/vndk-detect \
