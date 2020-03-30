@@ -1,10 +1,11 @@
-#Huawei devices don't declare fingerprint and telephony hardware feature
+#Huawei devices don't declare fingerprint and telephony hardware feature, as well as print feature
 #TODO: Proper detection
 PRODUCT_COPY_FILES := \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
 	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+	frameworks/native/data/etc/android.software.print.xml:system/etc/permissions/android.software.print.xml
 
 #Use a more decent APN config
 PRODUCT_COPY_FILES += \
