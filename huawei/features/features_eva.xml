@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- missing features from Emui -->
+<config>
+	<feature name="android.hardware.audio.output"/>
+	<feature name="android.hardware.microphone"/>
+	<feature name="android.software.backup,android"/>
+	<feature name="android.software.autofill"/>
+	<feature name="android.hardware.screen.landscape"/>
+	<feature name="android.hardware.screen.portrait"/>
+	<feature name="android.software.activities_on_secondary_displays"/>
+	<feature name="software.companion_device_setup"/>
+	<feature name="com.google.android.backuptransport"/>
+	<feature name="com.google.android.gms.location"/>
+	<feature name="android.software.connectionservice"/>
+	<feature name="android.software.cts"/>
+	<feature name="android.software.home_screen"/>
+	<feature name="android.software.device_admin"/>
+	<feature name="android.software.input_methods"/>
+	<feature name="android.software.managed_users"/>
+	<feature name="android.software.picture_in_picture"/>
+	<feature name="android.software.voice_recognizers"/>
+	<feature name="com.google.android.gsf"/>
+	<feature name="com.google.android.onetimeinitializer"/>
+	<feature name="com.google.android.packageinstaller"/>
+	<feature name="com.google.android.gms.drive"/>
+	<feature name="android.software.print"/>
+	<feature name="com.android.carrierconfig"/>
+	<feature name="com.android.connectivity.metrics"/>
+	<feature name="com.android.hotwordenrollment"/>
+	<feature name="com.android.hotwordenrollment.okgoogle"/>
+	<feature name="com.android.vending"/>
+	<feature name="com.google.android.apps.gcs"/>
+	<feature name="com.google.android.apps.maps"/>
+	<feature name="com.google.android.apps.work.oobconfig"/>
+	<feature name="com.google.android.carrierentitlement"/>
+	<feature name="com.google.android.configupdater"/>
+	<feature name="com.google.android.contacts"/>
+	<feature name="com.google.android.feature.services_updater"/>
+	<feature name="com.google.firebase"/>
+	<feature name="com.google.firebase.auth"/>
+	<feature name="com.google.firebase.messaging"/>
+	<feature name="com.google.android.gm"/>
+	<feature name="com.google.android.gms"/>
+	<feature name="com.google.android.gms.actions"/>
+	<feature name="com.google.android.gms.analytics"/>
+	<feature name="com.google.android.gms.appindexing"/>
+	<feature name="com.google.android.gms.auth"/>
+	<feature name="com.google.android.gms.auth.account"/>
+	<feature name="com.google.android.gms.auth.api"/>
+	<feature name="com.google.android.gms.auth.api.accounttransfer"/>
+	<feature name="com.google.android.gms.auth.api.credentials"/>
+	<feature name="com.google.android.gms.auth.api.signin"/>
+	<feature name="com.google.android.gms.awareness"/>
+	<feature name="com.google.android.gms.awareness.fence"/>
+	<feature name="com.google.android.gms.awareness.snapshot"/>
+	<feature name="com.google.android.gms.awareness.state"/>
+	<feature name="com.google.android.gms.cast"/>
+	<feature name="com.google.android.gms.common"/>
+	<feature name="com.google.android.gms.common.api"/>
+	<feature name="com.google.android.gms.common.data"/>
+	<feature name="com.google.android.gms.common.images"/>
+	<feature name="com.google.android.gms.fido"/>
+	<feature name="com.google.android.gms.fitness"/>
+	<feature name="com.google.android.gms.games"/>
+	<feature name="com.google.android.gms.gcm"/>
+	<feature name="com.google.android.gms.instantapps"/>
+	<feature name="com.google.android.gms.location.places"/>
+	<feature name="com.google.android.gms.location.places.ui"/>
+	<feature name="com.google.android.gms.maps"/>
+	<feature name="com.google.android.gms.nearby"/>
+	<feature name="com.google.android.gms.plus"/>
+	<feature name="com.google.android.gms.search"/>
+	<feature name="com.google.android.gms.security"/>
+	<feature name="com.google.android.gms.stats"/>
+	<feature name="com.google.android.gms.tasks"/>
+	<feature name="com.google.android.gms.wallet"/>
+	<feature name="com.google.android.gms.wearable"/>
+	<feature name="com.google.android.googlequicksearchbox"/>
+	<feature name="com.google.android.ims"/>
+	<feature name="com.google.android.partnersetup"/>
+	<feature name="com.google.android.syncadapters.calendar"/>
+	<feature name="com.google.android.tag"/>
+	<feature name="com.google.android.wfcactivation"/>
+</config>

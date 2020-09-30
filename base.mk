@@ -7,6 +7,10 @@ PRODUCT_COPY_FILES := \
 	frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
 	frameworks/native/data/etc/android.software.print.xml:system/etc/permissions/android.software.print.xml
 
+#Missing features from Emui
+PRODUCT_COPY_FILES += \
+	device/phh/treble/huawei/features/features_eva.xml:system/etc/sysconfig/features_eva.xml
+
 #Use a more decent APN config
 PRODUCT_COPY_FILES += \
 	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
