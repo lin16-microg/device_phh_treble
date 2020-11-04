@@ -7,6 +7,7 @@ grep -oE 'init_[0-9_]+' /vendor/etc/selinux/nonplat_sepolicy.cil | \
 	sed -E 's/.*init_([0-9]+).*/\1/g' | \
 while read version;do
 	setprop persist.sys.vndk $version
+	setprop persist.sys.ldcfg $version
 done
 
 if [ -d /sys/module/five ];then
@@ -22,7 +23,7 @@ fi
 
 if ( getprop ro.hardware | grep -qE '(hi3650)' );then
 	FOUND_HUAWEI=1
-	setprop persist.sys.vndk "hi3650"
+	setprop persist.sys.ldcfg "hi3650"
 fi
 
 if getprop ro.vendor.build.fingerprint |grep -qiE '(huawei|honor|hi3660)';then
