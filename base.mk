@@ -35,11 +35,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	ro.build.version.release=$(PLATFORM_VERSION) \
 	ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH) \
 	ro.logd.auditd=true
-	
+
 #Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	persist.sys.usb.config=adb \
-	ro.cust.cdrom=/dev/null	
+	ro.cust.cdrom=/dev/null
 
 #Huawei offline charging
 PRODUCT_COPY_FILES += \
@@ -65,7 +65,11 @@ PRODUCT_COPY_FILES += \
 
 # LineageOS build may need this to make NFC work
 PRODUCT_PACKAGES += \
-        NfcNci  
+        NfcNci
+
+# HUAWEI Camera
+PRODUCT_PACKAGES += \
+        HWCamera2
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
