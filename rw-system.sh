@@ -25,8 +25,13 @@ fixSPL() {
         setprop ro.keymaster.xxx.security_patch "$(getSPL "$img" spl)"
 
         #Vendor Security patch level, if needed
-        vspl="$(getprop ro.vendor.build.security_patch)"
-        [ -z "$vspl" ] && setprop ro.vendor.build.security_patch "$(getSPL "$img" spl)"
+        vspl="$(getprop ro.huawei.build.version.security_patch)"
+        if [ -n "$vspl" ]; then
+            setprop ro.vendor.build.security_patch "$vspl"
+        else
+            vspl="$(getprop ro.vendor.build.security_patch)"
+            [ -z "$vspl" ] && setprop ro.vendor.build.security_patch "$(getSPL "$img" spl)"
+        fi
 
         getprop ro.vendor.build.fingerprint | grep -qiE '^samsung/' && return 0
         for f in \
