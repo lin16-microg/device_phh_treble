@@ -12,10 +12,6 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
 	device/phh/treble/huawei/features/features_eva.xml:system/etc/sysconfig/features_eva.xml
 
-#Use a more decent APN config
-PRODUCT_COPY_FILES += \
-	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/phh/treble/sepolicy
 DEVICE_PACKAGE_OVERLAYS += \
 	device/phh/treble/overlay \
