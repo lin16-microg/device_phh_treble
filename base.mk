@@ -10,7 +10,8 @@ PRODUCT_COPY_FILES := \
 
 #Missing features from Emui
 PRODUCT_COPY_FILES += \
-	device/phh/treble/huawei/features/features_eva.xml:system/etc/sysconfig/features_eva.xml
+	device/phh/treble/huawei/features/features_eva.xml:system/phh/huawei/features_eva.xml \
+	device/phh/treble/huawei/proprietary/ons.bin:system/phh/huawei/ons.bin
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/phh/treble/sepolicy
 DEVICE_PACKAGE_OVERLAYS += \

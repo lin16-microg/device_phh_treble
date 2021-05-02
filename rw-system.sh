@@ -150,9 +150,19 @@ if [ "$(getprop ro.hardware)" = "hi3650" ]; then
     touch /system/lib/sphal-compat/libft2.so || true
     mount -o bind /system/lib/libft2.so /system/lib/sphal-compat/libft2.so || true
     chmod 755 /system/lib/sphal-compat
+
+    touch /system/etc/sysconfig/features_eva.xml || true
+    chmod 644 /system/etc/sysconfig/features_eva.xml
+    mount -o bind /system/phh/huawei/features_eva.xml /system/etc/sysconfig/features_eva.xml || true
 fi
 
-
+if getprop ro.vendor.build.fingerprint | grep -iq -E -e 'huawei|honor' || getprop persist.sys.overlay.huawei | grep -iq -E -e 'true'; then
+    mkdir -p /system/emui/base/global || true
+    chmod -R 755 /system/emui
+    touch /system/emui/base/global/ons.bin || true
+    chmod 644 /system/emui/base/global/ons.bin
+    mount -o bind /system/phh/huawei/ons.bin /system/emui/base/global/ons.bin
+fi
 
 mount -o remount,ro /system || true
 mount -o remount,ro / || true
