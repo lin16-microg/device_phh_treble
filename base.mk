@@ -67,7 +67,7 @@ PRODUCT_PACKAGES += \
 
 # HUAWEI Camera
 PRODUCT_PACKAGES += \
-        HWCamera2
+        HwCamera2
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
