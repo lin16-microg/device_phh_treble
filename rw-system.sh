@@ -154,6 +154,13 @@ if [ "$(getprop ro.hardware)" = "hi3650" ]; then
     touch /system/etc/sysconfig/features_eva.xml || true
     chmod 644 /system/etc/sysconfig/features_eva.xml
     mount -o bind /system/phh/huawei/features_eva.xml /system/etc/sysconfig/features_eva.xml || true
+
+    touch /system/lib/libdynproc.so || true
+    chmod 755 /system/lib/libdynproc.so || true
+    mount -o bind /system/phh/huawei/libdynproc.so /system/lib/libdynproc.so || true
+    sed -i \
+        's/\/vendor\/lib\/soundfx\/libdynproc.so/\/system\/lib\/libdynproc.so/g' \
+        /system/etc/audio_effects.conf || true
 fi
 
 if getprop ro.vendor.build.fingerprint | grep -iq -E -e 'huawei|honor' || getprop persist.sys.overlay.huawei | grep -iq -E -e 'true'; then

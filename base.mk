@@ -14,6 +14,10 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/huawei/features/features_eva.xml:system/phh/huawei/features_eva.xml \
 	device/phh/treble/huawei/proprietary/ons.bin:system/phh/huawei/ons.bin
 
+#Dynamics Processing Effect
+PRODUCT_COPY_FILES += \
+	device/phh/treble/libdynproc/libdynproc.so:system/phh/huawei/libdynproc.so
+
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/phh/treble/sepolicy
 DEVICE_PACKAGE_OVERLAYS += \
 	device/phh/treble/overlay \
