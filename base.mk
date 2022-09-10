@@ -12,7 +12,8 @@ PRODUCT_COPY_FILES := \
 #Missing features from Emui
 PRODUCT_COPY_FILES += \
 	device/phh/treble/huawei/features/features_eva.xml:system/phh/huawei/features_eva.xml \
-	device/phh/treble/huawei/proprietary/ons.bin:system/phh/huawei/ons.bin
+	device/phh/treble/huawei/proprietary/ons.bin:system/phh/huawei/ons.bin \
+	device/phh/treble/huawei/proprietary/qti-telephony-common.jar:system/framework/qti-telephony-common.jar
 
 #Dynamics Processing Effect
 PRODUCT_COPY_FILES += \
